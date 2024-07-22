@@ -1,26 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Student Registration</title>
+    <title>Form Example</title>
 </head>
 <body>
-    <h2>Student Registration Form</h2>
-    <form action="register.php" method="post">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required><br><br>
-        
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required><br><br>
-        
-        <label for="phone">Phone:</label>
-        <input type="text" id="phone" name="phone" required><br><br>
-        
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password" required><br><br>
-        
-        <input type="submit" value="Register">
+    <h1>Simple Form</h1>
+    <form method="post" action="">
+        Name: <input type="text" name="name">
+        <input type="submit">
     </form>
+
+    <?php
+        if ($_SERVER["REQUEST_METHOD"] == "POST") {
+            // Collect value of input field
+            $name = htmlspecialchars($_POST['name']);
+            if (empty($name)) {
+                echo "Name is empty";
+            } else {
+                echo "Hello, " . $name;
+            }
+        }
+    ?>
 </body>
 </html>
