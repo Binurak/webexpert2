@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Form Example</title>
+    <title>My website</title>
 </head>
 <body>
-    <h1>Simple Form</h1>
+    <h1>Submit your name here</h1>
     <form method="post" action="">
         Name: <input type="text" name="name">
         <input type="submit">
