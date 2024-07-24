@@ -56,7 +56,7 @@
 </head>
 <body>
     <div class="container">
-        <h1>Contact Us</h1>
+        <h1>Get In Touch With Us</h1>
         
         <?php
         $showForm = true;
@@ -73,7 +73,7 @@
             echo '</div>';
 
             $showForm = false;
-            // Here you can add code to send an email or save the message to a database
+           
         }
         
         if ($showForm):
